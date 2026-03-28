@@ -1,0 +1,81 @@
+{
+  "name": "rtmp",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/idle/1376547834/1"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "Connection": "Keep-Alive",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/x-fcs"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "__session"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/x-fcs",
+        "Connection": "Keep-Alive",
+        "Server": "FlashCom/3.5.7",
+        "Cache-Control": "no-cache"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/send/1376547834/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "Connection": "Keep-Alive",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/x-fcs"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/x-fcs",
+        "Connection": "Keep-Alive",
+        "Server": "FlashCom/3.5.7",
+        "Cache-Control": "no-cache"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

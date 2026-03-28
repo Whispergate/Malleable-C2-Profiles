@@ -1,0 +1,86 @@
+{
+  "name": "cnnvideo_getonly",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/cnn/cnnx/dai/hds/stream_hd/1/cnnxlive1_4.bootstrap"
+    ],
+    "client": {
+      "headers": {
+        "Host": "phds-live.cdn.turner.com",
+        "X-Requested-With": "ShockwaveFlash/24.0.0.186",
+        "Referer": "http://go.cnn.com/?stream=cnn&sr=watchHPbutton"
+      },
+      "parameters": {
+        "hdcore": "3.4.1",
+        "plugin": "aasp-3.4.1.1.1"
+      },
+      "message": {
+        "location": "parameter",
+        "name": "g"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "ngx_openresty",
+        "Content-Type": "application/octet-stream",
+        "ETag": "dbbece0334279b5bfbf88c27bda56444",
+        "Cache-Control": "max-age=1",
+        "Connection": "keep-alive"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/cnn/cnnx/dai/hds/stream_hd/2/cnnxlive1_4.bootstrap"
+    ],
+    "client": {
+      "headers": {
+        "Host": "phds-live.cdn.turner.com",
+        "X-Requested-With": "ShockwaveFlash/24.0.0.186"
+      },
+      "parameters": {
+        "hdcore": "3.4.1",
+        "plugin": "aasp-3.4.1.1.1"
+      },
+      "message": {
+        "location": "parameter",
+        "name": "g"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "ngx_openresty",
+        "Content-Type": "application/octet-stream",
+        "ETag": "dbbece0334279b5bfbf88c27bda56444",
+        "Cache-Control": "max-age=1",
+        "Connection": "keep-alive"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

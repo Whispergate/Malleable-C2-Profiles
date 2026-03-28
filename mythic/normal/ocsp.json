@@ -1,0 +1,77 @@
+{
+  "name": "ocsp",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/oscp/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "Host": "ocsp.verisign.com"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "netbios",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/ocsp-response",
+        "content-transfer-encoding": "binary",
+        "Cache-Control": "max-age=547738, public, no-transform, must-revalidate",
+        "Connection": "keep-alive"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/oscp/a/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "Host": "ocsp.verisign.com"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/ocsp-response",
+        "content-transfer-encoding": "binary",
+        "Cache-Control": "max-age=547738, public, no-transform, must-revalidate",
+        "Connection": "keep-alive"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "backoff",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/updates"
+    ],
+    "client": {
+      "headers": {},
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "user"
+      },
+      "transforms": [
+        {
+          "action": "netbiosu",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "user="
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "text/plain"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/windebug/updcheck.php /aircanada/dark.php /aero2/fly.php /windowsxp/updcheck.php /hello/flash.php"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "text/plain",
+        "Accept-Language": "en-us",
+        "Accept-Encoding": "text/plain",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "&op=1&id=vxeykS&ui=Josh @ PC&wv=11&gr=backoff&bv=1.55&data="
+        }
+      ]
+    },
+    "server": {
+      "headers": {},
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

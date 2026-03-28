@@ -1,0 +1,75 @@
+{
+  "name": "pitty_tiger",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/FC001/JOHN"
+    ],
+    "client": {
+      "headers": {
+        "Host": "newb02.skypetm.com.tw",
+        "Connection": "Keel-Alive"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "netbiosu",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Connection": "Keel-Alive",
+        "Content-Type": "text/html",
+        "Server": "IIS5.0"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/FC002/JOHN-"
+    ],
+    "client": {
+      "headers": {
+        "Host": "newb02.skypetm.com.tw",
+        "Connection": "Keel-Alive"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Connection": "Keel-Alive",
+        "Content-Type": "text/html",
+        "Server": "IIS5.0"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

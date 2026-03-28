@@ -1,0 +1,99 @@
+{
+  "name": "havex",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/include/template/isx.php /wp06/wp-includes/po.php /wp08/wp-includes/dtcla.php"
+    ],
+    "client": {
+      "headers": {
+        "Referer": "http://www.google.com",
+        "Accept": "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+        "Accept-Language": "en-us,en;q=0.5"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "__session"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Apache/2.2.26 (Unix)",
+        "X-Powered-By": "PHP/5.3.28",
+        "Cache-Control": "no-cache",
+        "Content-Type": "text/html",
+        "Keep-Alive": "timeout=3, max=100"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "<html><head><mega http-equiv='CACHE-CONTROL' content='NO-CACHE'></head><body>Sorry, no data corresponding your request.<!--havex"
+        },
+        {
+          "action": "append",
+          "value": "havex--></body></html>"
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/modules/mod_search.php /blog/wp-includes/pomo/src.php /includes/phpmailer/class.pop3.php"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/octet-stream"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Apache/2.2.26 (Unix)",
+        "X-Powered-By": "PHP/5.3.28",
+        "Cache-Control": "no-cache",
+        "Content-Type": "text/html",
+        "Keep-Alive": "timeout=3, max=100"
+      },
+      "transforms": [
+        {
+          "action": "prepend",
+          "value": "blah blah blah"
+        },
+        {
+          "action": "base64",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "<html><head><mega http-equiv='CACHE-CONTROL' content='NO-CACHE'></head><body>Sorry, no data corresponding your request.<!--havex"
+        },
+        {
+          "action": "append",
+          "value": "havex--></body></html>"
+        }
+      ]
+    }
+  }
+}

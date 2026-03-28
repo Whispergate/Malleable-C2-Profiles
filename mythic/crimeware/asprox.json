@@ -1,0 +1,81 @@
+{
+  "name": "asprox",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Transfer-Encoding": "base64",
+        "Connection": "Keep-Alive"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "netbiosu",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "nginx/1.2.5",
+        "Content-Type": "text/html",
+        "X-Powered-By": "PHP/5.4.4-7",
+        "Vary": "Accept-Encoding"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/78dc91f1A716DBBAA9E4E12C884C1CB1C27FFF2BEEED7DF1"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Transfer-Encoding": "base64",
+        "Connection": "Keep-Alive"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "nginx/1.2.5",
+        "Content-Type": "text/html",
+        "X-Powered-By": "PHP/5.4.4-7",
+        "Vary": "Accept-Encoding"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "onedrive_getonly",
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/sa"
+    ],
+    "client": {
+      "headers": {
+        "Host": "onedrive.live.com",
+        "Accept": "text/html,application/xml;*/*;",
+        "Accept-Encoding": "gzip, deflate"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "E"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "E=P:"
+        },
+        {
+          "action": "append",
+          "value": "=:PFzM9cj"
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Cache-Control": "no-cache, no-store",
+        "Pragma": "no-cache",
+        "Content-Type": "text/html; charset=utf-8",
+        "Expires": "-1",
+        "Vary": "Accept-Encoding",
+        "Server": "Microsoft-IIS/8.5",
+        "Set-Cookie": "E=P:We/01nw8bIg=:oItIbA04j2rDig4t8cWKNKaG/ZDZuMnyxXC+BkkNivU=:F; domain=.live.com; path=/"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

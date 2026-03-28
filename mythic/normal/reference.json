@@ -1,0 +1,96 @@
+{
+  "name": "reference",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/api/v1/Updates"
+    ],
+    "client": {
+      "headers": {
+        "Accept-Encoding": "deflate, gzip;q=1.0, *;q=0.5"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "SESSION"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        },
+        {
+          "action": "append",
+          "value": ";"
+        },
+        {
+          "action": "prepend",
+          "value": "SESSION="
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Encoding": "gzip"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "\\x1F\\x8B\\x08\\x08\\xF0\\x70\\xA3\\x50\\x00\\x03"
+        },
+        {
+          "action": "append",
+          "value": "\\x7F\\x01\\xDD\\xAF\\x58\\x52\\x07\\x00"
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/api/v1/Telemetry/Id/"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept-Encoding": "deflate, gzip;q=1.0, *;q=0.5"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "__session"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Content-Encoding": "gzip"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "\\x1F\\x8B\\x08\\x08\\xF0\\x70\\xA3\\x50\\x00\\x03"
+        },
+        {
+          "action": "append",
+          "value": "\\x7F\\x01\\xDD\\xAF\\x58\\x52\\x07\\x00"
+        }
+      ]
+    }
+  }
+}

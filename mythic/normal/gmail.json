@@ -1,0 +1,157 @@
+{
+  "name": "gmail",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/_/scs/mail-static/_/js/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate",
+        "DNT": "1"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "OSID"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "OSID="
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Cache-Control": "public, max-age=31536000",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "GSE",
+        "Alternate-Protocol": "443:quic,p=1"
+      },
+      "transforms": [
+        {
+          "action": "prepend",
+          "value": "try("
+        },
+        {
+          "action": "prepend",
+          "value": "O(L.Oa(),\"sy580\")"
+        },
+        {
+          "action": "prepend",
+          "value": "N(L.Oa(),\"sy580\");P(L.Oa(),\"sy580\");"
+        },
+        {
+          "action": "prepend",
+          "value": ")catch(e)(_DumpException(e))"
+        },
+        {
+          "action": "prepend",
+          "value": "try("
+        },
+        {
+          "action": "prepend",
+          "value": "O(L.Oa(),\"sy558\");"
+        },
+        {
+          "action": "prepend",
+          "value": "N(L.Oa(),\"sy558\");P(L.Oa(),\"sy558\");"
+        },
+        {
+          "action": "prepend",
+          "value": ")catch(e)(_DumpException(e))"
+        },
+        {
+          "action": "prepend",
+          "value": "try("
+        },
+        {
+          "action": "append",
+          "value": "var f2=function(a)(a=a.wa;return\"application/chromium-bookmark-folder\"==a||\"application/chromium-root-folder\"==a||\"application/vnd.google-apps.folder\"==a||\"application/vnd.google-apps.photoalbum\"==a||\"application/vnd.google-apps.rollupphotoalbum\"==a)"
+        },
+        {
+          "action": "append",
+          "value": ",g2=function(a)(return a.ra),s8d=function(a)(return a?hb(a,function(a)(return new UP(a)):[]),h2=function(a)(switch(a)(case \"all\":case \"docs-images\":case \"docs-images-and-videos\":case \"docs-videos\":case \"documents\":case \"drawings\":case \"folders\":case \"forms\":case \"pdfs\":case \"presentations\":case \"sites\":case \"spreadsheets\":case \"tables\":return!0)return!1); O(L.Oa(),\"sy588\")"
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/mail/u/0/"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
+      },
+      "parameters": {
+        "ui": "d3244c4707",
+        "hop": "6928632",
+        "start": "0"
+      },
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "GSE"
+      },
+      "transforms": [
+        {
+          "action": "prepend",
+          "value": "[[[\"apm\",\""
+        },
+        {
+          "action": "append",
+          "value": "\"]"
+        },
+        {
+          "action": "append",
+          "value": ",[\"ci\",[]"
+        },
+        {
+          "action": "append",
+          "value": "]"
+        },
+        {
+          "action": "append",
+          "value": ",[\"cm\",[]"
+        },
+        {
+          "action": "append",
+          "value": ",[]"
+        },
+        {
+          "action": "append",
+          "value": "]"
+        },
+        {
+          "action": "append",
+          "value": "],'dbb8796a80d45e1f']"
+        }
+      ]
+    }
+  }
+}

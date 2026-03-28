@@ -1,0 +1,67 @@
+{
+  "name": "apt1_virtuallythere",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/zOMGAPT"
+    ],
+    "client": {
+      "headers": {},
+      "parameters": null,
+      "message": {
+        "location": "parameter",
+        "name": "tmp"
+      },
+      "transforms": [
+        {
+          "action": "netbiosu",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/octet-stream"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/BUYTHEAPTDETECTORNOW"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/octet-stream"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "name": "fiesta2",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/v20idaf/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "netbios",
+          "value": ""
+        },
+        {
+          "action": "append",
+          "value": ";112202;228"
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "nginx/1.4.4",
+        "Content-Type": "application/octet-stream",
+        "Connection": "close"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "nginx/1.4.4",
+        "Content-Type": "application/octet-stream",
+        "Connection": "close"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "name": "comfoo",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/CWoNaJLBo/VTNeWw11212/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*",
+        "Accept-Language": "en-en",
+        "Connection": "Keel-Alive",
+        "Cache-Control": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "netbiosu",
+          "value": ""
+        },
+        {
+          "action": "append",
+          "value": "/UTWOqVQ132/"
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Apache/2.0.50 (Unix)",
+        "Keep-Alive": "timeout=15, max=90"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/CWoNaJLBo/VTNeWw11213/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*",
+        "Accept-Language": "en-en",
+        "Connection": "Keel-Alive",
+        "Cache-Control": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Apache/2.0.50 (Unix)",
+        "Keep-Alive": "timeout=15, max=90"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

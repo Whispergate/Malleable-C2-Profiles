@@ -1,0 +1,91 @@
+{
+  "name": "safebrowsing",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/safebrowsing/rd/CltOb12nLW1IbHehcmUtd2hUdmFzEBAY7-0KIOkUDC7h2"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "PREF"
+      },
+      "transforms": [
+        {
+          "action": "netbios",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "PREF=ID="
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/vnd.google.safebrowsing-chunk",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Encoding": "gzip",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Cache-Control": "public,max-age=172800",
+        "Age": "1222",
+        "Alternate-Protocol": "80:quic"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/safebrowsing/rd/CINnu27nLO8hbHdfgmUtc2ihdmFyEAcY4"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/vnd.google.safebrowsing-chunk",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Encoding": "gzip",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Cache-Control": "public,max-age=172800",
+        "Age": "1222",
+        "Alternate-Protocol": "80:quic"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

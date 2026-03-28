@@ -1,0 +1,81 @@
+{
+  "name": "zeus",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/metro91/admin/1/ppptp.jpg"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "Connection": "Close",
+        "Host": "mahamaya1ifesciences.com",
+        "Cache-Control": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "__session"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "nginx/1.0.4",
+        "Content-Type": "text/html",
+        "Connection": "close",
+        "X-Powered-By": "PHP/5.3.8-1~dotdeb.2"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/metro91/admin/1/secure.php"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "Connection": "Keep-Alive",
+        "Host": "mahamaya1ifesciences.com",
+        "Cache-Control": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "nginx/1.0.4",
+        "Content-Type": "text/html",
+        "Connection": "close",
+        "X-Powered-By": "PHP/5.3.8-1~dotdeb.2"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "putter",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/MicrosoftUpdate/ShellEx/KB242742/default.aspx"
+    ],
+    "client": {
+      "headers": {
+        "User-Agent": "Mozilla/4.0 (Compatible; MSIE 6.0;Windows NT 5.1)",
+        "Accept": "*/*, ..., ......, ."
+      },
+      "parameters": null,
+      "message": {
+        "location": "parameter",
+        "name": "tmp"
+      },
+      "transforms": [
+        {
+          "action": "netbiosu",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/octet-stream"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/MicrosoftUpdate/GetUpdate/KB"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "User-Agent": "Mozilla/4.0 (Compatible; MSIE 6.0;Windows NT 5.1)"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

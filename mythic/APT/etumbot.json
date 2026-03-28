@@ -1,0 +1,83 @@
+{
+  "name": "etumbot",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/image/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*l;q=0.8",
+        "Referer": "http://www.google.com",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "netbios",
+          "value": ""
+        },
+        {
+          "action": "append",
+          "value": "-.jpg"
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "img/jpg",
+        "Server": "Microsoft-IIS/6.0",
+        "X-Powered-By": "ASP.NET"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/history/"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Referer": "http://www.google.com",
+        "Pragma": "no-cache",
+        "Cache-Control": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "img/jpg",
+        "Server": "Microsoft-IIS/6.0",
+        "X-Powered-By": "ASP.NET"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

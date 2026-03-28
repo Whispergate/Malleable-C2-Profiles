@@ -1,0 +1,109 @@
+{
+  "name": "googledrive_getonly",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/viewerng/meta"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "text/html,application/xml;*/*;",
+        "Accept-Encoding": "gzip, deflate",
+        "Host": "drive.google.com",
+        "Cookie": "SID=KsY0f3fxIeBLQRn2wHMhgJvTkFbWZIEqNyABgX_nveBtm9LeEmsHn6I9OmYzpw;"
+      },
+      "parameters": {
+        "u": "0"
+      },
+      "message": {
+        "location": "parameter",
+        "name": "id"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        },
+        {
+          "action": "netbios",
+          "value": ""
+        },
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Content-Disposition": "attachment; filename=\"json.txt\"; filename*=UTF-8''json.txt",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "GSE",
+        "Connection": "close"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/viewersng/meta"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "text/html,application/xml;*/*;",
+        "Accept-Encoding": "gzip, deflate",
+        "Host": "drive.google.com",
+        "Cookie": "SID=KsY0f3fxIeBLQRn2wHMhgJvTkFbWZIEqNyABgX_nveBtm9LeEmsHn6I9OmYzpw;"
+      },
+      "parameters": null,
+      "message": {
+        "location": "parameter",
+        "name": "id"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        },
+        {
+          "action": "netbios",
+          "value": ""
+        },
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Content-Disposition": "attachment; filename=\"json.txt\"; filename*=UTF-8''json.txt",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "Server": "GSE",
+        "Connection": "close"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

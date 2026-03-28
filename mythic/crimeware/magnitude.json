@@ -1,0 +1,81 @@
+{
+  "name": "magnitude",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/themes/index.php"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "image/jpeg, application/*",
+        "Referer": "http://www.bankofbotswana.bw/",
+        "Accept-Encoding": "gzip, deflate",
+        "Host": "wilfredcostume.bamoon.com"
+      },
+      "parameters": null,
+      "message": {
+        "location": "parameter",
+        "name": "id"
+      },
+      "transforms": [
+        {
+          "action": "netbios",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Apache/2.2.17 (Ubuntu)",
+        "X-Powered-By": "PHP/5.3.5-1ubuntu7.8",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/work/1.php"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US;q=0.5,en;q=0.3",
+        "Accept-Encoding": "gzip, deflate",
+        "Content-Type": "application/octet-stream"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Apache/2.2.17 (Ubuntu)",
+        "X-Powered-By": "PHP/5.3.5-1ubuntu7.8",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

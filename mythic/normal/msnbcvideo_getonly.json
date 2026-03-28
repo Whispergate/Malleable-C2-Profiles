@@ -1,0 +1,96 @@
+{
+  "name": "msnbcvideo_getonly",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/z/msnbc2_live01@9615/manifest.f4m"
+    ],
+    "client": {
+      "headers": {
+        "Host": "msnbc2prod-lh.akamaihd.net",
+        "X-Requested-With": "ShockwaveFlash/24.0.0.186",
+        "Referer": "http://player.theplatform.com/p/7wvmTC/NBCOnAirProdPlayer/embed/select?s=msnbc"
+      },
+      "parameters": {
+        "hdcore": "3.1"
+      },
+      "message": {
+        "location": "parameter",
+        "name": "g"
+      },
+      "transforms": [
+        {
+          "action": "netbios",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "AkamaiGHost",
+        "Mime-Version": "1.0",
+        "Content-Type": "video/abst",
+        "Cache-Control": "max-age=0, no-cache",
+        "Pragma": "no-cache",
+        "Connection": "keep-alive",
+        "Set-Cookie": "_alid_=RKs7UfhDqLr37whMpHIwBg==; path=/z/msnbc2_live01@9615/; domain=msnbc2prod-lh.akamaihd.net"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/z/msnbc2_live01@6915/manifest.f4m"
+    ],
+    "client": {
+      "headers": {
+        "Host": "msnbc2prod-lh.akamaihd.net",
+        "X-Requested-With": "ShockwaveFlash/24.0.0.186"
+      },
+      "parameters": {
+        "hdcore": "3.1"
+      },
+      "message": {
+        "location": "parameter",
+        "name": "g"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "http://player.theplatform.com/p/"
+        },
+        {
+          "action": "append",
+          "value": "/NBCOnAirProdPlayer/embed/select?s=msnbc"
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "AkamaiGHost",
+        "Mime-Version": "1.0",
+        "Content-Type": "video/abst",
+        "Cache-Control": "max-age=0, no-cache",
+        "Pragma": "no-cache",
+        "Connection": "keep-alive",
+        "Set-Cookie": "_alid_=RKs7UfhDqLr37whMpHIwBg==; path=/z/msnbc2_live01@6915/; domain=msnbc2prod-lh.akamaihd.net"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

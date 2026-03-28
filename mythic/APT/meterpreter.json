@@ -1,0 +1,77 @@
+{
+  "name": "meterpreter",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/ucD"
+    ],
+    "client": {
+      "headers": {
+        "Cache-Control": "no-cache",
+        "Connection": "Keep-Alive",
+        "Pragma": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Connection": "Keep-Alive",
+        "Server": "Apache"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/ucW"
+    ],
+    "client": {
+      "headers": {
+        "Cache-Control": "no-cache",
+        "Connection": "Keep-Alive",
+        "Pragma": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "application/octet-stream",
+        "Connection": "Keep-Alive",
+        "Server": "Apache"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

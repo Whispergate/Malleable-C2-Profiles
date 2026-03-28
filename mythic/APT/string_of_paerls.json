@@ -1,0 +1,75 @@
+{
+  "name": "string_of_paerls",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/2/R.exe"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "__session"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Apache/2",
+        "X-Powered-By": "PHP/5.3.28",
+        "Vary": "User-Agent",
+        "Content-Type": "application/octet-stream"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/boss/image.php"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Apache/2",
+        "X-Powered-By": "PHP/5.3.28",
+        "Vary": "User-Agent",
+        "Content-Type": "application/octet-stream"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

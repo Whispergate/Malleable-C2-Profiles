@@ -1,0 +1,75 @@
+{
+  "name": "randomized",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/zC"
+    ],
+    "client": {
+      "headers": {},
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "text/plain"
+      },
+      "transforms": [
+        {
+          "action": "prepend",
+          "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        },
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/dE"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "parameters": null,
+      "message": {
+        "location": "cookie",
+        "name": "__session"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "text/plain"
+      },
+      "transforms": [
+        {
+          "action": "prepend",
+          "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        },
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

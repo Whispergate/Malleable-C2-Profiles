@@ -1,0 +1,98 @@
+{
+  "name": "pandora",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/access/"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "GetContentFeatures.DLNA.ORG": "1",
+        "Host": "audio-sv5-t1-3.pandora.com",
+        "Cookie": " __utma=210077622.1732439995.1433201462.1403204372.1385202493.2;"
+      },
+      "parameters": {
+        "version": "4",
+        "lid": "1582502724"
+      },
+      "message": {
+        "location": "parameter",
+        "name": "token"
+      },
+      "transforms": [
+        {
+          "action": "netbios",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Apache",
+        "Cache-Control": "no-cache, no-store, must-revalidate, max-age=-1",
+        "Pragma": "no-cache, no-store",
+        "Expires": "-1",
+        "Connection": "close",
+        "Content-Type": "audio/mp4"
+      },
+      "transforms": [
+        {
+          "action": "prepend",
+          "value": "\\x6d\\x6f\\x6f\\x76\\x00\\x00\\x00\\x6c\\x6d\\x76\\x68\\x64"
+        },
+        {
+          "action": "prepend",
+          "value": "\\x4d\\x34\\x56\\x20\\x6d\\x70\\x34\\x32\\x69\\x73\\x6f\\x6d\\x00\\x01\\x6f\\xd9"
+        },
+        {
+          "action": "prepend",
+          "value": "\\x00\\x00\\x00\\x1c\\x66\\x74\\x79\\x70\\x6d\\x70\\x34\\x32\\x00\\x00\\x00\\x01"
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/radio/xmlrpc/v35"
+    ],
+    "client": {
+      "headers": {
+        "Accept": "*/*",
+        "Content-Type": "text/xml",
+        "X-Requested-With": "XMLHttpRequest",
+        "Host": "www.pandora.com"
+      },
+      "parameters": {
+        "lid": "1582502724",
+        "method": "getSearchRecommendations"
+      },
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "text/xml",
+        "Cache-Control": "no-cache, no-store, no-transform, must-revalidate, max-age=0",
+        "Expires": "-1",
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "gzip"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

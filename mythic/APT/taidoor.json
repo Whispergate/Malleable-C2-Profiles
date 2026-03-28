@@ -1,0 +1,103 @@
+{
+  "name": "taidoor",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/login.jsp /parse.jsp /page.jsp /default.jsp /index.jsp /process.jsp /security.jsp /user.jsp"
+    ],
+    "client": {
+      "headers": {
+        "Connection": "Keep-Alive",
+        "Cache-Control": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "parameter",
+        "name": "mn"
+      },
+      "transforms": [
+        {
+          "action": "netbiosu",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Microsoft-IIS/5.0",
+        "Content-Type": "text/html",
+        "Connection": "close"
+      },
+      "transforms": [
+        {
+          "action": "base64",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "<style>\\n"
+        },
+        {
+          "action": "prepend",
+          "value": "<head>\\n"
+        },
+        {
+          "action": "prepend",
+          "value": "<html dir=ltr>\\n"
+        },
+        {
+          "action": "prepend",
+          "value": "<!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 3.2 Final//EN>\\n"
+        },
+        {
+          "action": "append",
+          "value": "\\n</style>\\n"
+        },
+        {
+          "action": "append",
+          "value": "</head>\\n"
+        },
+        {
+          "action": "append",
+          "value": "</html>\\n"
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/submit.jsp"
+    ],
+    "client": {
+      "headers": {
+        "Connection": "Keep-Alive",
+        "Cache-Control": "no-cache"
+      },
+      "parameters": null,
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Server": "Microsoft-IIS/5.0",
+        "Content-Type": "text/html",
+        "Connection": "close"
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    }
+  }
+}

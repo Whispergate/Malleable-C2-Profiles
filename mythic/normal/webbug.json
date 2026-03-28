@@ -1,0 +1,100 @@
+{
+  "name": "webbug",
+  "get": {
+    "verb": "GET",
+    "uris": [
+      "/__utm.gif"
+    ],
+    "client": {
+      "headers": {},
+      "parameters": {
+        "utmac": "UA-2202604-2",
+        "utmcn": "1",
+        "utmcs": "ISO-8859-1",
+        "utmsr": "1280x1024",
+        "utmsc": "32-bit",
+        "utmul": "en-US"
+      },
+      "message": {
+        "location": "parameter",
+        "name": "utmcc"
+      },
+      "transforms": [
+        {
+          "action": "netbios",
+          "value": ""
+        },
+        {
+          "action": "prepend",
+          "value": "__utma"
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "image/gif"
+      },
+      "transforms": [
+        {
+          "action": "prepend",
+          "value": "\\x01\\x00\\x01\\x00\\x00\\x02\\x01\\x44\\x00\\x3b"
+        },
+        {
+          "action": "prepend",
+          "value": "\\xff\\xff\\xff\\x21\\xf9\\x04\\x01\\x00\\x00\\x00\\x2c\\x00\\x00\\x00\\x00"
+        },
+        {
+          "action": "prepend",
+          "value": "\\x47\\x49\\x46\\x38\\x39\\x61\\x01\\x00\\x01\\x00\\x80\\x00\\x00\\x00\\x00"
+        }
+      ]
+    }
+  },
+  "post": {
+    "verb": "POST",
+    "uris": [
+      "/___utm.gif"
+    ],
+    "client": {
+      "headers": {
+        "Content-Type": "application/octet-stream"
+      },
+      "parameters": {
+        "utmcn": "1",
+        "utmcs": "ISO-8859-1",
+        "utmsr": "1280x1024",
+        "utmsc": "32-bit",
+        "utmul": "en-US"
+      },
+      "message": {
+        "location": "body",
+        "name": ""
+      },
+      "transforms": [
+        {
+          "action": "base64url",
+          "value": ""
+        }
+      ]
+    },
+    "server": {
+      "headers": {
+        "Content-Type": "image/gif"
+      },
+      "transforms": [
+        {
+          "action": "prepend",
+          "value": "\\x01\\x00\\x01\\x00\\x00\\x02\\x01\\x44\\x00\\x3b"
+        },
+        {
+          "action": "prepend",
+          "value": "\\xff\\xff\\xff\\x21\\xf9\\x04\\x01\\x00\\x00\\x00\\x2c\\x00\\x00\\x00\\x00"
+        },
+        {
+          "action": "prepend",
+          "value": "\\x47\\x49\\x46\\x38\\x39\\x61\\x01\\x00\\x01\\x00\\x80\\x00\\x00\\x00\\x00"
+        }
+      ]
+    }
+  }
+}
