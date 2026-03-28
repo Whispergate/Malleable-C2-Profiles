@@ -38,7 +38,11 @@
   "post": {
     "verb": "POST",
     "uris": [
-      "/windebug/updcheck.php /aircanada/dark.php /aero2/fly.php /windowsxp/updcheck.php /hello/flash.php"
+      "/windebug/updcheck.php",
+      "/aircanada/dark.php",
+      "/aero2/fly.php",
+      "/windowsxp/updcheck.php",
+      "/hello/flash.php"
     ],
     "client": {
       "headers": {
